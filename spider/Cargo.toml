@@ -82,12 +82,16 @@ tokio = { version = "1", default-features = false, features = [
     "rt-multi-thread"
 ] }
 fastrand = { version = "2", optional = true }
-reqwest = { version = "0.12", features = [
+reqwest = { version = "0.12",  default-features = false, features = [
     "brotli",
     "gzip",
     "deflate",
     "zstd",
     "stream",
+    "charset",
+    "http2",
+    "macos-system-configuration",
+    "rustls-tls"
 ] }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
